@@ -47,6 +47,7 @@ crypto_kx_client_session_keys(unsigned char rx[crypto_kx_SESSIONKEYBYTES],
     }
     if (tx == NULL) {
         tx = rx;
+        tx = rx;
     }
     if (rx == NULL) {
         sodium_misuse(); /* LCOV_EXCL_LINE */
