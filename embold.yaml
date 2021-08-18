@@ -19,7 +19,7 @@ sources:
     - '.git'
     
 # Specify the languages you would like to Scan. Default is all Detected
-languages: 'SWIFT,JAVA'
+languages: 'JAVA,CPP,C_SHARP,PYTHON,JAVASCRIPT,TYPESCRIPT,GO,SCALA,OBJECTIVE_C,KOTLIN,WEB,PHP,SOLIDITY,SQL,SWIFT,APEX,HTML,CSS'
 
 
 # Define modules one would like to run or disable. This is enough for Basic Users
