@@ -1,22 +1,5 @@
 version: 1
-sources:
-  #Files or Directories to be Excluded are mentioned in exclusions
-  exclusions:
-    - 'test'
-    - 'generated'
-    - 'mock'
-    - 'thirdparty'
-    - 'third-party'
-    - '3rd-party'
-    - '3rdparty'
-    - 'external'
-    - 'build'
-    - 'node_modules'
-    - 'assets'
-    - 'gulp'
-    - 'grunt'
-    - 'library'
-    - '.git'
+
     
 # Specify the languages you would like to Scan. Default is all Detected
 languages: 'JAVA,CPP,C_SHARP,PYTHON,JAVASCRIPT,TYPESCRIPT,GO,SCALA,OBJECTIVE_C,KOTLIN,WEB,PHP,SOLIDITY,SQL,SWIFT,APEX,HTML,CSS'
