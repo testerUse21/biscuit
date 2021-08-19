@@ -11,6 +11,6 @@ modules:
 #  - name: pmd
 #    enabled: true
   - name: gamma_cxx
-    enabled: false
+    enabled: true
 #  - name: jshint
 #    enabled: true
