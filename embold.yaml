@@ -1,6 +1,5 @@
 version: 1
 sources:
-  #Files or Directories to be Excluded are mentioned in exclusions
   exclusions:
     - 'test'
     - 'generated'
@@ -16,18 +15,8 @@ sources:
     - 'gulp'
     - 'grunt'
     - 'library'
+    - 'libs'
     - '.git'
-    
-# Specify the languages you would like to Scan. Default is all Detected
-#languages: 'JAVA'
-
-
-# Define modules one would like to run or disable. This is enough for Basic Users
-# Get List of Modules (Which are Default Enabled/Disabled) at https://docs.embold.io/
-modules:
-#  - name: pmd
-#    enabled: true
-  - name: gamma_cxx
-    enabled: true
-#  - name: jshint
-#    enabled: true
+    - '.so'
+    - '.h'
+    - 'openCV'
