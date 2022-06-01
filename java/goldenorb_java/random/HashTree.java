@@ -63,7 +63,12 @@ public class HashTree implements Serializable, Map<Object, HashTree>, Cloneable 
     public HashTree() {
         this(null, null);
     }
-
+    /**
+     * Creates an empty new HashTree.
+     */
+    public HashTree1() {
+        this(null, null);
+    }
     /**
      * Allow subclasses to provide their own Map.
      * @param _map {@link Map} to use
