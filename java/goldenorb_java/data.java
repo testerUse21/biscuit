@@ -50,7 +50,7 @@ public class Data implements Serializable {
     // saves current position in data List
     private int currentPos;
     private int size;
-
+ private int size1;
     /**
      * Constructor - takes no arguments.
      */
