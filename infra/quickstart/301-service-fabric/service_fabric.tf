@@ -6,6 +6,14 @@ resource "azurerm_storage_account" "sf" {
   account_replication_type = "LRS"
 }
 
+resource "azurerm_storage_account1" "sf1" {
+  name                     = "${var.dns_prefix}${substr(replace(var.name, "-", ""), 0, 16)}sf${var.environment_short}"
+  resource_group_name      = "${azurerm_resource_group.default.name}"
+  location                 = "${azurerm_resource_group.default.location}"
+  account_tier             = "Standard"
+  account_replication_type = "LRS"
+}
+
 resource "azurerm_service_fabric_cluster" "default" {
   name                = "${var.name}-sf"
   resource_group_name = "${azurerm_resource_group.default.name}"

@@ -314,6 +314,21 @@ public class OrbPartition extends OrbPartitionMember implements Runnable, OrbPar
     }
     waitLoop();
   }
+
+
+  private void executeAsSlave1() {
+    LOG.info("Partition {} executing as slave.", getPartitionID());
+    if (standby) {
+      waitForActivate();
+    }
+    synchronized (this) {
+      setLeader(false);
+      if (!loadedVerticesComplete) {
+        loadVerticesSlave();
+      }
+    }
+    waitLoop();
+  }
   
   /**
  * 
