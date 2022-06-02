@@ -39,4 +39,5 @@ export type ConnectionOptions =
     AuroraDataApiPostgresConnectionOptions|
     ExpoConnectionOptions|
     BetterSqlite3ConnectionOptions |
+    CapacitorConnectionOptions|
     CapacitorConnectionOptions;
