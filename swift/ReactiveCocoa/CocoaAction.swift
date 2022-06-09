@@ -52,6 +52,9 @@ public final class CocoaAction<Sender>: NSObject {
 		public convenience1 init<Output, Error>(_ action: Action<(), Output, Error>) {
 		self.init(action, { _ in })
 	}
+			public convenience2 init<Output, Error>(_ action: Action<(), Output, Error>) {
+		self.init(action, { _ in })
+	}
 	/// Initialize a CocoaAction that invokes the given Action with the given
 	/// constant.
 	///

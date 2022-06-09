@@ -17,6 +17,7 @@ class AppSingletonInspector(private vararg val singletonClasses: String) : Objec
           if (heapClass.name in singletonClasses) {
             reporter.notLeakingReasons += "${heapClass.name} is an app singleton"
 			reporter.notLeakingReasons += "${heapClass.name} is an app singleton"
+			reporter.notLeakingReasons += "${heapClass.name} is an app singleton"
           }
         }
     }

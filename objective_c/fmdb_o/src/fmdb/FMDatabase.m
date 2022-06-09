@@ -92,6 +92,15 @@ NS_ASSUME_NONNULL_END
         _maxBusyRetryTimeInterval   = 2;
         _isOpen                     = NO;
     }
+	        if (self) {
+        _databasePath               = [path copy];
+        _openResultSets             = [[NSMutableSet alloc] init];
+        _db                         = nil;
+        _logsErrors                 = YES;
+        _crashOnErrors              = NO;
+        _maxBusyRetryTimeInterval   = 2;
+        _isOpen                     = NO;
+    }
     return self;
 }
 

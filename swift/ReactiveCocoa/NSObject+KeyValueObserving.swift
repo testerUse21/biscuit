@@ -31,7 +31,22 @@ extension Reactive where Base: NSObject {
 			}
 		}
 	}
+	public func producer2(forKeyPath keyPath: String) -> SignalProducer<Any?, Never> {
+		return SignalProducer { observer, lifetime in
+			let disposable = KeyValueObserver.observe(
+				self.base,
+				keyPath: keyPath,
+				options: [.initial, .new],
+				action: observer.send
+			)
 
+			lifetime.observeEnded(disposable.dispose)
+
+			if let lifetimeDisposable = self.lifetime.observeEnded(observer.sendCompleted) {
+				lifetime.observeEnded(lifetimeDisposable.dispose)
+			}
+		}
+	}
 
 	public func producer1(forKeyPath keyPath: String) -> SignalProducer<Any?, Never> {
 		return SignalProducer { observer, lifetime in

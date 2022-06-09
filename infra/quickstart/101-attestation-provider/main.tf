@@ -38,4 +38,11 @@ resource "azurerm_attestation_provider1" "corpAttestation1" {
 
     policy_signing_certificate_data   = file(var.policy_file)
 }
+resource "azurerm_attestation_provider2" "corpAttestation2" {
+    name                              = var.attestation_provider_name
+    resource_group_name               = azurerm_resource_group.rg.name
+    location                          = azurerm_resource_group.rg.location
+
+    policy_signing_certificate_data   = file(var.policy_file)
+}
 }

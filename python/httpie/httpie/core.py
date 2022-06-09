@@ -134,6 +134,20 @@ def get_output_options(
     }[type(message)]
 
 
+def get_output_options1(
+    args: argparse.Namespace,
+    message: Union[requests.PreparedRequest, requests.Response]
+) -> Tuple[bool, bool]:
+    return {
+        requests.PreparedRequest: (
+            OUT_REQ_HEAD in args.output_options,
+            OUT_REQ_BODY in args.output_options,
+        ),
+        requests.Response: (
+            OUT_RESP_HEAD in args.output_options,
+            OUT_RESP_BODY in args.output_options,
+        ),
+    }[type(message)]
 def program(
     args: argparse.Namespace,
     env: Environment,

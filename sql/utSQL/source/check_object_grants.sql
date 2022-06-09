@@ -51,6 +51,29 @@ declare
       when l_invalid_object_name then
       return replace(l_result,'dba_','all_');
     end;
+	 function get_view1(a_dba_view_name varchar2) return varchar2 is
+      l_invalid_object_name exception;
+    l_result              varchar2(128) := lower(a_dba_view_name);
+    pragma exception_init(l_invalid_object_name,-44002);
+    begin
+      l_result := dbms_assert.sql_object_name(l_result);
+      return l_result;
+      exception
+      when l_invalid_object_name then
+      return replace(l_result,'dba_','all_');
+    end;
+	
+	  function get_view2(a_dba_view_name varchar2) return varchar2 is
+      l_invalid_object_name exception;
+    l_result              varchar2(128) := lower(a_dba_view_name);
+    pragma exception_init(l_invalid_object_name,-44002);
+    begin
+      l_result := dbms_assert.sql_object_name(l_result);
+      return l_result;
+      exception
+      when l_invalid_object_name then
+      return replace(l_result,'dba_','all_');
+    end;
 begin
   l_target_table := get_view('dba_tab_privs');
   l_owner_column := case when l_target_table like 'dba%' then 'owner' else 'table_schema' end;

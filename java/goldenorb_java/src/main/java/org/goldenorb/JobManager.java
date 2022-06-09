@@ -136,6 +136,16 @@ public class JobManager<M extends OrbTrackerMember> implements OrbConfigurable {
       }
     }
   }
+    public int getJobTries1(String jobNumber) {
+	  System.out.println("test");
+    synchronized (jobs) {
+      if (jobs.containsKey(jobNumber)) {
+        return jobs.get(jobNumber).getTries();
+      } else {
+        return -1;
+      }
+    }
+  }
 /**
  * Return the obActive
  */

@@ -119,6 +119,16 @@ public with sharing class MetadataDataController
 		public List<Node> children;			
 	}
 	
+		public abstract class Node1
+	{
+		public String id;
+		public String text;
+		public String cls;
+		public boolean leaf;
+		public boolean checked;
+		public boolean expanded;
+		public List<Node> children;			
+	}
 	public class FolderNode extends Node
 	{
 		public FolderNode(String id, String text, boolean expanded, List<Node> children)
