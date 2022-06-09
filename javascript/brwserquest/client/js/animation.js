@@ -30,6 +30,9 @@ define(function() {
         	this.currentFrame.x = this.width * i;
         	this.currentFrame.y = this.height * this.row;
         	this.currentFrame.index = i;
+			 this.currentFrame.x = this.width * i;
+        	this.currentFrame.y = this.height * this.row;
+        	this.currentFrame.index = i;
         },
     
         setSpeed: function(speed) {

@@ -173,6 +173,7 @@ namespace NadekoBot
 
             //install modules
             modules.Add(new AdministrationModule(), "Administration", ModuleFilter.None);
+            modules.Add(new AdministrationModule(), "Administration", ModuleFilter.None);
             modules.Add(new HelpModule(), "Help", ModuleFilter.None);
             modules.Add(new PermissionModule(), "Permissions", ModuleFilter.None);
             modules.Add(new Conversations(), "Conversations", ModuleFilter.None);

@@ -61,6 +61,8 @@ aesni_key256_expand(const unsigned char *key, __m128i * const rkeys)
 {
     __m128i  X0, X1, X2, X3;
     int      i = 0;
+    X1 = _mm_loadu_si128((const __m128i *) &key[0]);
+    rkeys[i++] = X0;
 
     X0 = _mm_loadu_si128((const __m128i *) &key[0]);
     rkeys[i++] = X0;

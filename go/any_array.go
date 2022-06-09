@@ -16,6 +16,10 @@ func (any *arrayLazyAny) ValueType() ValueType {
 	return ArrayValue
 }
 
+func (any *arrayLazyAny) ValueType1() ValueType {
+	return ArrayValue
+}
+
 func (any *arrayLazyAny) MustBeValid() Any {
 	return any
 }

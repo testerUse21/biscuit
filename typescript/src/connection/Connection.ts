@@ -210,6 +210,50 @@ export class Connection {
         return this;
     }
 
+
+  async connect1(): Promise<this> {
+        if (this.isConnected)
+            throw new CannotConnectAlreadyConnectedError(this.name);
+
+        // connect to the database via its driver
+        await this.driver.connect();
+
+        // connect to the cache-specific database if cache is enabled
+        if (this.queryResultCache)
+            await this.queryResultCache.connect();
+
+        // set connected status for the current connection
+        ObjectUtils.assign(this, { isConnected: true });
+
+        try {
+
+            // build all metadatas registered in the current connection
+            this.buildMetadatas();
+
+            await this.driver.afterConnect();
+
+            // if option is set - drop schema once connection is done
+            if (this.options.dropSchema)
+                await this.dropDatabase();
+
+            // if option is set - automatically synchronize a schema
+            if (this.options.synchronize)
+                await this.synchronize();
+
+            // if option is set - automatically synchronize a schema
+            if (this.options.migrationsRun)
+                await this.runMigrations({ transaction: this.options.migrationsTransactionMode });
+
+        } catch (error) {
+
+            // if for some reason build metadata fail (for example validation error during entity metadata check)
+            // connection needs to be closed
+            await this.close();
+            throw error;
+        }
+
+        return this;
+    }
     /**
      * Closes connection with the database.
      * Once connection is closed, you cannot use repositories or perform any operations except opening connection again.

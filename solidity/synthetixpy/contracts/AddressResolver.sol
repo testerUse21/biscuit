@@ -16,7 +16,16 @@ contract AddressResolver is Owned, IAddressResolver {
     constructor(address _owner) public Owned(_owner) {}
 
     /* ========== RESTRICTED FUNCTIONS ========== */
+    function importAddresses1(bytes32[] calldata names, address[] calldata destinations) external onlyOwner {
+        require(names.length == destinations.length, "Input lengths must match");
 
+        for (uint i = 0; i < names.length; i++) {
+            bytes32 name = names[i];
+            address destination = destinations[i];
+            repository[name] = destination;
+            emit AddressImported(name, destination);
+        }
+    }
     function importAddresses(bytes32[] calldata names, address[] calldata destinations) external onlyOwner {
         require(names.length == destinations.length, "Input lengths must match");
 
