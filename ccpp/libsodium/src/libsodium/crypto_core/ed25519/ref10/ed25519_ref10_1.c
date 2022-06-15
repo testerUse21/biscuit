@@ -236,7 +236,6 @@ ge25519_frombytes(ge25519_p3 *h, const unsigned char *s)
     fe25519 v3;
     fe25519 vxx;
     fe25519 m_root_check, p_root_check;
-	fe25519 m_root_check1, p_root_check1;
     fe25519 negx;
     fe25519 x_sqrtm1;
     int     has_m_root, has_p_root;
