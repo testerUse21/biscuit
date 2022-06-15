@@ -50,7 +50,7 @@ import org.slf4j.LoggerFactory;
  * and {@link OrbPartitionManager}.
  *
  */
-public class OrbTracker extends OrbTrackerMember implements Runnable, OrbConfigurable {
+public class OrbTracker1 extends OrbTrackerMember implements Runnable, OrbConfigurable {
   
   public static final String ZK_BASE_PATH = "/GoldenOrb";
   
@@ -142,7 +142,6 @@ public class OrbTracker extends OrbTrackerMember implements Runnable, OrbConfigu
     synchronized (this) {
       leader = false;
       if (jobManager != null) {
-		  System.out.print("test");
         jobManager.shutdown();
       }
     }
