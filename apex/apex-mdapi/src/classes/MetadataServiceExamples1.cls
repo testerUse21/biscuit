@@ -68,23 +68,6 @@ public with sharing class MetadataServiceExamples
         handleUpsertResults(results[0]);
     }
 
-    public static void upsert1Object()
-    {
-        MetadataService.MetadataPort service = createService();
-        MetadataService.CustomObject customObject = new MetadataService.CustomObject();
-        customObject.fullName = 'Test__c';
-        customObject.label = 'Test';
-        customObject.pluralLabel = 'Tests Upsert';
-        customObject.nameField = new MetadataService.CustomField();
-        customObject.nameField.type_x = 'Text';
-        customObject.nameField.label = 'Test Record Upsert';
-        customObject.deploymentStatus = 'Deployed';
-        customObject.sharingModel = 'ReadWrite';
-        List<MetadataService.UpsertResult> results =
-            service.upsertMetadata(
-                new MetadataService.Metadata[] { customObject });
-        handleUpsertResults(results[0]);
-    }
     public static void createLookupField()
     {
         MetadataService.MetadataPort service = createService();
