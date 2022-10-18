@@ -33,7 +33,7 @@ modules:
          - key: 'EMB-JAVA-10'
            enabled: true
     - name: pmd
-      enabled: true
+      enabled: false
 
 
 
