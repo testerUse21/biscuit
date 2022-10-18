@@ -28,12 +28,12 @@ sources:
 #Specify modules you would like to enable or disable.
 modules:
     - name: gamma_java
-      enabled: true
+      enabled: false
       rules:
          - key: 'EMB-JAVA-10'
-           enabled: true
+           enabled: false
     - name: pmd
-      enabled: false
+      enabled: true
 
 
 
