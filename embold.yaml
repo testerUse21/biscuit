@@ -29,7 +29,7 @@ modules:
       enabled: true
       rules:
          - key: 'EMB-JAVA-23'
-           enabled: true
+           enabled: false
     - name: pmd
       enabled: true
 
