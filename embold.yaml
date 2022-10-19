@@ -29,7 +29,7 @@ modules:
       enabled: true
       rules:
          - key: 'ESLINT-TS-573'
-           enabled: true
+           enabled: false
          - key: 'EMB-JAVA-23'
            enabled: false
     - name: pmd
