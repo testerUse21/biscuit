@@ -29,7 +29,7 @@ sources:
 #Specify modules you would like to enable or disable.
 modules:
     - name: gamma_cs
-      enabled: true
+      enabled: false
       rules:
          - key: 'EMB-CS-C_SHARP-80'
            enabled: false
