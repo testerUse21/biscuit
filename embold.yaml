@@ -1,6 +1,6 @@
 version: 1
 ## Please visit https://docs.embold.io/v2-quick-start-guide/#update-configurations to know more
-languages: 'CPP'
+languages: 'TYPESCRIPT'
 # Sources mention which Files/Dirs to be taken for Analysis
 sources:
   #Files or Directories to be Excluded are mentioned in exclusions
@@ -25,13 +25,9 @@ sources:
 
 #Specify modules you would like to enable or disable.
 modules:
-    - name: ESLint
-      enabled: true
-      rules:
-         - key: 'ESLINT-TS-573'
-           enabled: false
-         - key: 'ESLINT-JS-317'
-           enabled: false
+    - name: EmboldCXX
+      enabled: false
+      
     - name: pmd
       enabled: false
 
