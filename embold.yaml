@@ -1,6 +1,6 @@
 version: 1
 ## Please visit https://docs.embold.io/v2-quick-start-guide/#update-configurations to know more
-languages: 'C_SHARP'
+languages: 'HTML'
 # Sources mention which Files/Dirs to be taken for Analysis
 sources:
   #Files or Directories to be Excluded are mentioned in exclusions
@@ -22,16 +22,17 @@ sources:
     - 'libs'
     - '.git'
     - 'demosubproject'
+    - 'typescript'
 
 
 
 
 #Specify modules you would like to enable or disable.
 modules:
-    - name: gamma_cs
-      enabled: false
+    - name: htmlhint
+      enabled: true
       rules:
-         - key: 'EMB-CS-C_SHARP-80'
+         - key: 'HINT-HTML-23'
            enabled: false
       
 
