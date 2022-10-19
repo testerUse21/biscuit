@@ -30,7 +30,7 @@ modules:
     - name: brakeman
       enabled: true
       rules:
-         - key: 'BKM-RUBY-4'
+         - key: 'BKM-RUBY-5'
            enabled: false
     
 
