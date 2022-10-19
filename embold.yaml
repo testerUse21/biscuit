@@ -26,11 +26,11 @@ sources:
 #Specify modules you would like to enable or disable.
 modules:
     - name: ESLint
-      enabled: true
+      enabled: false
       rules:
          - key: 'ESLINT-TS-573'
            enabled: false
-         - key: 'EMB-JAVA-23'
+         - key: 'ESLINT-JS-317'
            enabled: false
     - name: pmd
       enabled: false
