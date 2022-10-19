@@ -25,10 +25,10 @@ sources:
 
 #Specify modules you would like to enable or disable.
 modules:
-    - name: gamma_java
+    - name: ESLint
       enabled: true
       rules:
-         - key: 'EMB-JAVA-10'
+         - key: 'ESLINT-TS-573'
            enabled: true
          - key: 'EMB-JAVA-23'
            enabled: false
