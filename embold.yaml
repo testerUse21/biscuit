@@ -26,8 +26,10 @@ sources:
 #Specify modules you would like to enable or disable.
 modules:
     - name: EmboldCXX
-      enabled: false
-      
+      enabled: true
+      rules:
+         - key: 'EMB-CPP-510'
+           enabled: false
     - name: pmd
       enabled: false
 
