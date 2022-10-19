@@ -26,12 +26,12 @@ sources:
 
 
 #Specify modules you would like to enable or disable.
-modules:
-    - name: emboldcxx
-      enabled: true
-      rules:
-         - key: 'EMB-CPP-578'
-           enabled: false
+#modules:
+#    - name: emboldcxx
+#      enabled: true
+#      rules:
+#         - key: 'EMB-CPP-578'
+#           enabled: false
     
 
 
