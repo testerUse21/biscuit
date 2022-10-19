@@ -28,8 +28,11 @@ sources:
 
 #Specify modules you would like to enable or disable.
 modules:
-    - name: microsoft_security_codescan
-      enabled: false
+    - name: gamma_cs
+      enabled: true
+      rules:
+         - key: 'EMB-CS-C_SHARP-80'
+           enabled: false
       
 
 ## Please visit https://docs.embold.io/v2-quick-start-guide/#update-configurations to know more
