@@ -31,7 +31,7 @@ modules:
       enabled: true
       rules:
          - key: 'BKM-RUBY-5'
-           enabled: false
+           enabled: true
     
 
 
